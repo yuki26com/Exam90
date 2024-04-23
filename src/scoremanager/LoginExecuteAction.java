@@ -35,7 +35,7 @@ public class LoginExecuteAction extends Action{
 		school.setCd(school_cd);
 		school.setName("大宮校");
 
-		teacher.setSchool(school);//School型
+		teacher.setSchool(school);// School型
 
 		// 認証済みフラグを立てる
 		teacher.setAuthenticated(true);
