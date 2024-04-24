@@ -17,7 +17,7 @@
 			<option value="0">--------</option>
 			<c:forEach var="year" items="${ent_year_set}">
 				<%-- 現在のyearと選択されていたent_yearが一致していた場合selectedを追記 --%>
-				<option value="${year}" <c:if test="${year==ent_year}">selected</c:if>>${★★★★★★★}</option>
+				<option value="${year}" <c:if test="${year==ent_year}">selected</c:if>>${year}</option>
 			</c:forEach>
 		</select>
 		<div>${errors.get("ent_year")}</div>
@@ -37,7 +37,7 @@
 		<select name="class_num">
 			<c:forEach var="num" items="${class_num_set}">
 				<%-- 現在のnumと選択されていたclass_numが一致していた場合selectedを追記 --%>
-				<option value="${num}" <c:if test="${num==class_num}">selected</c:if>>${★★★★★★★}</option>
+				<option value="${num}" <c:if test="${num==class_num}">selected</c:if>>${num}</option>
 			</c:forEach>
 		</select>
 

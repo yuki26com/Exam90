@@ -12,10 +12,10 @@
 	<h2>学生情報変更</h2>
 	<form action = "StudentUpdateExecute.action" method="post">
 
-		<label>入学年度</label>
+		<label>入学年度</label>${ent_year}
   		<input type="hidden" name="ent_year" value="${ent_year}">
 
-		<label>学生番号</label>
+		<label>学生番号</label>${no}
  		<input type="hidden" name="no" value="${no}">
 
 		<label>氏名</label>
@@ -27,7 +27,7 @@
 		<select name="class_num">
 			<c:forEach var="num" items="${class_num_set}">
 				<%-- 現在のnumと選択されていたclass_numが一致していた場合selectedを追記 --%>
-				<option value="${num}" <c:if test="${num==class_num}">selected</c:if>>${★★★★★★★}</option>
+				<option value="${num}" <c:if test="${num==class_num}">selected</c:if>>${num}</option>
 			</c:forEach>
 		</select>
 

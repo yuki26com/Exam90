@@ -37,7 +37,7 @@ public class StudentCreateExecuteAction extends Action {
 
 		//リクエストパラメータ―の取得 2
 		entYear = Integer.parseInt(req.getParameter("ent_year"));//入学年度
-		no = req.getParameter("student_no");//学生番号
+		no = req.getParameter("no");//学生番号
 		name = req.getParameter("name");//氏名
 		classNum = req.getParameter("class_num");//クラス番号
 
@@ -69,7 +69,7 @@ public class StudentCreateExecuteAction extends Action {
 				// 学生を保存
 				sDao.save(student);
 			} else {//入力された学番がDBに保存されていた場合
-				errors.put("no", "学生番号が重複しています");
+				errors.put("stusent_no", "学生番号が重複しています");
 			}
 		}
 

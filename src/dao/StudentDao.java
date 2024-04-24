@@ -360,7 +360,7 @@ public class StudentDao  extends Dao{
 				// 学生が存在する場合
 				// プリペアードステートメントにUPDATE文をセット
 				statement = connection.prepareStatement(
-				"update student set name = ?, ent_year = ?, class_num = ?, is_attend = ?, where student_no = ?");
+				"update student set name = ?, ent_year = ?, class_num = ?, is_attend = ? where student_no = ?");
 				// プリペアードステートメントに値をバインド
 				statement.setString(1, student.getName());
 				statement.setInt(2, student.getEntYear());
